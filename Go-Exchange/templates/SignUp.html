@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css
+    /bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/
+    iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>SignUp</title>
+    <style>
+        body{
+            top: 0px;
+            left: 0px;
+            width: 1366px;
+            height: 768px;
+            opacity: 1;
+            background:#F7FAFA;
+            background-image:url('/static/Home-screen-bg.png');
+            background-repeat:no-repeat;
+            background-size:100%;
+        }
+
+        form{
+            padding-top: 100px;
+            color:#FFFFFF;
+            padding-left: 100px;
+        }
+
+        .container{
+            margin-top: 0px;
+            margin-left: 850px;
+            width: 500px;
+            height: 569px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        div label {
+            display: block;
+        }
+            div input{
+            border-radius:80px;
+            border:1px solid #D0D0D0;
+            margin-top:20px;
+            margin-right:10px;
+            height:40px;
+        }
+
+        .button {
+            margin-left:120px;
+            margin-top:30px;
+            width: 230px;
+            height: 50px;
+            background: #0A5988 0% 0% no-repeat padding-box;
+            border-radius: 40px;
+            border:none;
+            opacity: 1;
+            outline:none
+        }
+    
+    </style>
+    </head>
+
+    <body>
+
+    <img src="/static/logo.png" style="padding-top:80px;padding-left:100px"></img>
+
+    <form>
+        {% csrf_token %}
+        <div class="container">
+            <p style="padding-top:20px;left: 240px;padding-left:50px;width: 390px;height: 26px;text-align: center;
+            font-family:sans-serif;font:Helvetica Neue;font-size:21px;letter-spacing: 0px;color: #747474;opacity: 1">
+            <b>SIGN IN</b></p>
+            <hr style="height:2px;border-width:0;background-color:#F7FAFA">
+            <h2 style="color: green;">{{ display }}</h2>
+            <div>
+                <input type="text" name="fname" placeholder="First Name" style="margin-left:20px;width:210px;outline:none" required/>
+            </div>
+            <div>
+                <input type="text" name="lname" placeholder="Last Name" style="margin-left:10px;width:210px;outline:none" required/>
+            </div>
+
+            <input type="email" name="email_id" placeholder="Enter Email" style="margin-left:20px;width:450px;margin-top:15px;outline:none" required/>
+
+            <div>
+                <input type="text" name= "country" placeholder="Country" style="margin-left:20px;width:130px;margin-top:15px;outline:none" required/>
+            </div>
+            <div>
+                <input type="text" name=" state" placeholder="State" style="margin-left:10px;width:130px;margin-top:15px;outline:none" required/>
+            </div>
+            <div>
+                <input type="text" name="city" placeholder="City" style="margin-left:10px;width:130px;margin-top:15px;outline:none" required/>
+            </div>
+
+            <input type="password" id="txtNewPassword"  placeholder="Enter Password" name="password" style="margin-left:20px;width:450px;margin-top:15px;outline:none" required/>
+
+            <input type="password" id="txtConfirmPassword"  placeholder="Confirm Password" name="confirmpassword" style="margin-left:20px;width:450px;margin-top:15px;outline:none" required/>
+
+            <hr style="height:2px;border-width:0;background-color:#F7FAFA;margin-top:20px">
+
+            <button href="/GoExchange" type = "submit"class="button" style="font-family:sans-serif;font:Helvetica Neue;
+        color:#F7FAFA;font-size:18px;cursor:pointer"><b>Go Exchange</b></button><br>
+
+        <div class="registrationFormAlert" style="margin-left:20px;color:#0A5899;font-family:sans-serif;font-Helvetica Neue" id="CheckPasswordMatch">
+            
+        </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    <script>
+    function checkPasswordMatch() {
+        var password = $("#txtNewPassword").val();
+        var confirmPassword = $("#txtConfirmPassword").val();
+        if (password != confirmPassword)
+            $("#CheckPasswordMatch").html("Passwords does not match!");
+        else
+            $("#CheckPasswordMatch").html("Passwords match.");
+    }
+    $(document).ready(function () {
+       $("#txtConfirmPassword").keyup(checkPasswordMatch);
+    });
+    </script>
+
+    </body>
+
+
+</html>

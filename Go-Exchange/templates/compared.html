@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css
+    /bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/
+    iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Go-Exchange</title>
+    <style>
+        body{
+            top: 0px;
+            left: 0px;
+            width: 1500px;
+            height: 1800px;
+            opacity: 1;
+            background:#F7FAFA;
+            background-repeat:no-repeat;
+            background-size:100%;
+        }
+
+        ul{
+            float:right;
+        }
+
+        ul li{
+            display:inline-block;
+            padding-top:60px;
+        }
+
+        ul li a{
+            top: 66px;
+            left:942px;
+            width: 62px;
+            height: 29px;
+            text-align: left;
+            text-decoration:none;
+            font-family:sans-serif;
+            font-style: Helvetica Neue;
+            font-size:17px;
+            letter-spacing: 0px;
+            color: #383838;
+            opacity: 1;
+            }
+        
+        .img-valign {
+            vertical-align: middle;
+            margin-bottom: 0.75em;
+        }
+
+        table.bottomBorder {
+            border-collapse: collapse;
+            margin-left:80px;
+            margin-top:70px;
+        }
+
+        table.bottomBorder td,
+        table.bottomBorder th {
+            border-bottom: 1px solid #DBDBDB;
+            padding: 10px;
+            text-align: left;
+            font-family:sans-serif;
+            font:Helvetica Neue;
+            font-size:15.5px;
+            padding-right:70px;
+        }
+
+        </style>
+    </head>
+    <body>
+        <img src="/static/logo.png" style="padding-top:80px;padding-left:100px"></img>
+
+        <ul>
+            <li><a href="#"><b>About Us</b></a></li>
+            <li><a href="#" style="padding-left:73px;font-style:Helvetica Neue"><b>Contact Us</b></a></li>
+            <li><img class="img-valign" src="/static/sign-in.png" alt="" style = "padding-left:73px"/>
+            <a class="text1" href="#"><b>Anagha J.</b></a></li>
+        </ul>
+
+        <table class="bottomBorder">
+        <tr>
+            <th style="color:#747474;"><b>Forex Provider Name</b></th>
+            <th style="padding-left:580px;color:#747474"><b>Exchange Rate</b></th>
+            <th style="color:#747474"><b>Service Time</b></th>
+            <th style="color:#747474"><b>Ratings</b></th>
+        </tr>
+        <tr>
+            <td>Placid</td>
+            <td style="padding-left:622px;">74.15 INR</td>
+            <td style="padding-left:40px">2 days</td>
+            <td style="padding-left:40px">4/5<img src="/static/more.png" style="height:25px;padding-left:55px;cursor:pointer"/></td>
+        </tr>
+        <tr>
+            <td>XE</td>
+            <td  style="padding-left:620px;">0.013 USD</td>
+            <td style="padding-left:40px">2 days</td>
+            <td style="padding-left:27px">4.8/5<img src="/static/more.png" style="height:25px;padding-left:55px;cursor:pointer"/></td>
+        </tr>
+        <tr>
+            <td>Western Union</td>
+            <td  style="padding-left:610px;">0.0135 USD</td>
+            <td style="padding-left:40px">2 days</td>
+            <td style="padding-left:27px">4.8/5<img src="/static/more.png" style="height:25px;padding-left:55px;cursor:pointer"/></td>
+        </tr>
+        <tr>
+            <td>AXI</td>
+            <td  style="padding-left:630px;">0.05 CAD</td>
+            <td style="padding-left:40px">2 days</td>
+            <td style="padding-left:27px">4.8/5<img src="/static/more.png" style="height:25px;padding-left:55px;cursor:pointer"/></td>
+        </tr>
+        <tr>
+            <td>Etoro</td>
+            <td  style="padding-left:630px;">0.05 CAD</td>
+            <td style="padding-left:40px">2 days</td>
+            <td style="padding-left:27px">4.8/5<img src="/static/more.png" style="height:25px;padding-left:55px;cursor:pointer"/></td>
+        </tr>
+        </table>
+        </body>
